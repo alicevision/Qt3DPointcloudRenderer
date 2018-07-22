@@ -82,7 +82,7 @@ target_include_directories(Qt3DPointcloudRenderer PUBLIC  ${PROJECT_SOURCE_DIR}/
                                                   PRIVATE ${PROJECT_SOURCE_DIR}/src/ )
 
 if(WITH_PCL)
-    target_link_libraries(Qt3DPointcloudRenderer ${PCL_LIBRARIES} stdc++)
+    target_link_libraries(Qt3DPointcloudRenderer ${PCL_LIBRARIES})
     target_include_directories(${PROJECT_NAME} PRIVATE PRIVATE ${PCL_INCLUDE_DIRS})
     #target_compile_definitions(${PROJECT_NAME} PRIVATE ${PCL_DEFINITIONS}) causes command-line error in cmake from ubuntu 16.04
     target_compile_definitions(${PROJECT_NAME} PUBLIC WITH_PCL=1)
